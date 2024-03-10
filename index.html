@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #userData {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .card{
+           
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px !important;
+            /* margin: 5px; */
+        }
+
+        img{
+            display: block;
+            text-align: center;
+            /* width: 40%; */
+            width: 200px;
+
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> User Data</h1>
+    <div class="container">
+        <div id="userData">
+           
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let userData = document.getElementById("userData")
+        let data = [
+            {
+                Name: "Abdul Raqeeb",
+                University: "Govenment College UH",
+                Department: "Information Technology",
+                Program: "BS",
+                Year: "3rd",
+                image : "./Assets/corporate-user-icon.webp"
+            },
+            {
+                Name: "Ahmed Faraz ",
+                University: "Govenment College UH",
+                Department: "omputer Science",
+                Program: "BS",
+                Year: "1st",
+                image : "./Assets/corporate-user-icon.webp"
+            },
+            {
+                Name: "Muhammad Qavi",
+                University: "Sindh University",
+                Department: "Software Engineering",
+                Program: "BS",
+                Year: "3rd",
+                image : "./Assets/corporate-user-icon.webp"
+            },
+            {
+                Name: "Abdul Raqeeb",
+                University: "Govenment College UH",
+                Department: "Information Technology",
+                Program: "BS",
+                Year: "3rd",
+                image : "./Assets/corporate-user-icon.webp"
+            },
+            {
+                Name: "Ahmed Faraz ",
+                University: "Govenment College UH",
+                Department: "omputer Science",
+                Program: "BS",
+                Year: "1st",
+                image : "./Assets/corporate-user-icon.webp"
+            }
+        ]
+
+        data.map((value)=>{
+            userData.innerHTML +=`
+            <div class="card">
+                <img src=${value.image}>
+
+                <h2>User Name : ${value.Name}</h2>
+                <h4>User Name : ${value.University}</h4>
+                <h4>User Name : ${value.Department}</h4>
+                <h4>User Name : ${value.Program}</h4>
+                <h4>User Name : ${value.Year}</h4>
+            </div>
+            
+
+            `
+
+        })
+    </script>
+</body>
+
+</html>
